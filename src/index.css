@@ -189,6 +189,42 @@ body {
     invert;
 }
 
+.paris-container {
+  background-color: var(--light-gr);
+    @apply 
+    items-center
+    absolute
+    top-32
+    left-[34rem]
+    vertical
+    h-[10rem]
+    w-[30rem]
+    md:h-[4rem]
+    md:w-[20rem]
+    rounded-full
+    text-center
+    py-4
+    px-4
+    text-white;
+}
+
+.city-container {
+  background-color: var(--light-gr);
+    @apply 
+    items-center
+    absolute
+    vertical
+    h-[10rem]
+    w-[30rem]
+    md:h-[4rem]
+    md:w-[20rem]
+    rounded-full
+    text-center
+    py-4
+    px-4
+    text-white;
+}
+
 .modals {
   margin: 0px !important;
   @apply 
@@ -199,7 +235,6 @@ body {
     top-0 
     left-0
     bg-black/40 
-    overflow-hidden
   ;
 }
 
@@ -215,4 +250,10 @@ body {
     mx-auto 
   ;
 }
+
+/* Removing styling around Bootstrap modal */
+.modal-content {
+	background-color: transparent;
+}
+
 
