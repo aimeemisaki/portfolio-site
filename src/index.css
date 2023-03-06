@@ -1,3 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Prompt:wght@100;400&family=Rubik+Mono+One&family=Staatliches&display=swap');
+
+:root {
+  --light-gr: #ACB5A6;
+  --dark-gr:rgba(50, 50, 50, 0.8);
+  --bg-gr: #20271B;
+  --forest-gr: #383527;
+  --modal-bg: rgba(50, 50, 50, 0.8);
+  --scroll-thumb: rgb(90, 90, 90);
+}
+
+/* #36422F;*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +23,234 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1D1E1C;
+  font-family: 'Poiret One', cursive;
+  @apply
+    font-semibold
 }
 
-code {
+@layer components {
+	/* Scrollbar */
+	.scroll::-webkit-scrollbar {
+		@apply w-3 h-3;
+	}
+
+	.scroll::-webkit-scrollbar-thumb {
+		background-color: var(--scroll-thumb);
+		@apply rounded-full;
+	}
+
+	.scroll::-webkit-scrollbar-track-piece {
+		background-color: var(--modal-bg);
+		@apply rounded-full;
+	}
+
+	.scroll::-webkit-scrollbar-track-piece:start {
+		margin-top: 15px;
+	}
+	.scroll::-webkit-scrollbar-track-piece:end {
+		margin-bottom: 15px;
+	}
+}
+
+.text {
+  @apply
+    text-xs
+    md:text-base;
+}
+
+.header-text {
+  @apply
+    text-sm
+    md:text-lg;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/*  Layout */
+.horizontal {
+  @apply
+    flex
+    flex-row;
 }
+.vertical {
+  @apply
+    flex
+    flex-col;
+}
+
+/* Modals */
+.modals {
+  margin: 0px !important;
+  @apply 
+    h-screen 
+    w-full 
+    z-10 
+    fixed 
+    top-0 
+    left-0
+    bg-black/40 
+    overflow-hidden
+  ;
+}
+
+.modals-content {
+  @apply 
+    max-h-[80%] 
+    modal-bg
+    rounded-2xl 
+    scroll
+    border
+    mt-16
+    md:mt-36 
+    mx-auto 
+  ;
+}
+
+/* Navigation */
+.nav-title {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: white;
+  @apply
+    text-2xl;
+}
+
+.nav-title:hover {
+  color: var(--forest-gr);
+}
+.navbar {
+  background-color:#ACB5A6;
+  color: white;
+  font-family: 'Poiret One', cursive;
+  @apply
+    text-xl
+    font-semibold;
+}
+
+.nav-link:hover {
+  color: var(--forest-gr);
+}
+
+.menu {
+  background-color: var(--light-gr);
+  @apply
+    h-screen
+    w-screen
+    z-10
+    fixed
+    top-0
+    left-0
+    vertical
+    justify-evenly
+    text-center
+  ;
+}
+
+.hover-nav-small {
+  @apply 
+    hover:text-slate-800 
+    hover:font-normal 
+    hover:bg-white/40 
+    rounded-2xl p-3;
+}
+
+/* Home */
+.home {
+  @apply
+    flex
+    flex-col
+    md:flex-row;
+}
+.intro {
+  background-color:#222522;
+  color: white;
+}
+
+.portrait-container {
+  overflow:hidden;
+  filter: drop-shadow(0 8px 5px rgb(172, 181, 166));
+  @apply
+    rounded-full
+    md:h-[500px]
+    md:w-[500px]
+    mt-16
+    ml-24
+}
+
+.home-text-container {
+    @apply
+      flex
+      justify-center
+      items-center
+      text-white
+      flex-col
+      w-2/4
+      ml-24
+  ;
+}
+
+.home-header {
+  @apply
+    pb-8;
+}
+
+.home-text {
+  @apply
+    pb-6;
+}
+/* Experiences */
+.experiences-container {
+  @apply
+    grid 
+    place-items-center
+    row-span-5 
+    pt-16
+  ;
+}
+
+.world-map {
+  @apply
+    w-3/5
+    ;
+}
+
+.paris-container {
+  background-color: var(--light-gr);
+    @apply 
+    items-center
+    absolute
+    top-32
+    left-[34rem]
+    vertical
+    h-[10rem]
+    w-[30rem]
+    md:h-[4rem]
+    md:w-[20rem]
+    rounded-full
+    text-center
+    py-4
+    px-4
+    text-white;
+}
+
+.city-container {
+  background-color: var(--light-gr);
+    @apply 
+    items-center
+    absolute
+    vertical
+    h-[10rem]
+    w-[30rem]
+    md:h-[4rem]
+    md:w-[20rem]
+    rounded-full
+    text-center
+    py-4
+    px-4
+    text-white;
+}
+
+
