@@ -7,31 +7,28 @@ import resume from '../../assets/resume.pdf'
 import Modal from 'react-bootstrap/Modal';
 
 const Experiences = () => {
-
-    const [toggle, setToggle] = useState(false)
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
         <>
-        <div className='experiences' onClick={e => setToggle(toggleModal(e))}>
-            <div>
-                <button onClick={() => setToggle(toggleModal())}>
+        <div className='experiences'>
+            <div className='resume-button-container'>
+                <button onClick={handleShow} className='resume-button'>
                     RESUME
                 </button>
             </div>
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Body>
-                    <div>
-                    <iframe src={resume} title='resume' frameborder="0" width="100%" height="400px"> 
-                    </iframe>
-                    </div>
-                    </Modal.Body>
-            </Modal>
             <div className='experiences-container'>
                 <img className='world-map' src={worldMap} alt='world-map'></img>
             </div>
+                    <Modal show={show} onHide={handleClose}> 
+                        <div>
+                            <iframe src={resume} title='resume' frameborder="0" width="100%" height="800px" className="resume-file"> 
+                             </iframe>
+                        </div>
+                    </Modal>
+            
             <Paris />
             
         </div>

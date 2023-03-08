@@ -98,13 +98,13 @@ body {
 }
 
 .modals-content {
+  background-color: var(--modal-bg);
   @apply 
     max-h-[80%] 
-    modal-bg
     rounded-2xl 
     scroll
     border
-    mt-16
+    mt-8
     md:mt-36 
     mx-auto 
   ;
@@ -206,7 +206,7 @@ body {
   @apply
     grid 
     place-items-center
-    row-span-5 
+    row-span-3
     pt-16
   ;
 }
@@ -217,40 +217,68 @@ body {
     ;
 }
 
-.paris-container {
-  background-color: var(--light-gr);
-    @apply 
-    items-center
-    absolute
-    top-32
-    left-[34rem]
-    vertical
-    h-[10rem]
-    w-[30rem]
-    md:h-[4rem]
-    md:w-[20rem]
-    rounded-full
-    text-center
-    py-4
-    px-4
-    text-white;
+.resume-button-container {
+  @apply
+    mt-12
+    grid 
+    place-items-center;
 }
 
-.city-container {
-  background-color: var(--light-gr);
-    @apply 
-    items-center
-    absolute
-    vertical
-    h-[10rem]
-    w-[30rem]
-    md:h-[4rem]
-    md:w-[20rem]
+.resume-button {
+  background-color: white;
+  color:var(--forest-gr);
+    @apply
     rounded-full
     text-center
-    py-4
-    px-4
-    text-white;
+    w-1/5
+    h-[3rem]
+    ;
 }
 
+.resume-file {
+  @apply
+    scroll;
+}
+
+/* Projects */
+.left-btn {
+  @apply 
+			h-14 
+			w-14 
+			border-gray-500/80 
+			border-r-4 
+			border-b-4 
+			rounded 
+			absolute 
+			top-1/2
+			hidden
+			sm:block
+}
+
+/* About */
+.about-page {
+  @apply
+    grid 
+    place-items-center
+    row-span-3
+    pt-16
+  ;
+}
+
+.about-container {
+  background-color: var(--light-gr);
+  color:white;
+  @apply
+    rounded-full
+    w-3/5
+    w-3/5
+    sm:w-3/5
+    sm:h-4/5
+    text-center
+    object-contain;
+}
+
+.about-header {
+  font-family: 'Rubik Mono One', sans-serif;
+}
 
