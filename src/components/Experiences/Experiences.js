@@ -15,7 +15,7 @@ const Experiences = () => {
         <>
         <div className='experiences'>
             <div className='resume-button-container'>
-                <button onClick={handleShow} className='resume-button'>
+                <button onClick={handleShow} className='link-button'>
                     RESUME
                 </button>
             </div>

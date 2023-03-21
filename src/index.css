@@ -12,6 +12,7 @@
   --forest-gr: #383527;
   --modal-bg: rgba(50, 50, 50, 0.8);
   --scroll-thumb: rgb(90, 90, 90);
+  --med-gr: #90B677;
 }
 
 /* #36422F;*/
@@ -241,18 +242,40 @@ body {
 }
 
 /* Projects */
-.left-btn {
-  @apply 
-			h-14 
-			w-14 
-			border-gray-500/80 
-			border-r-4 
-			border-b-4 
-			rounded 
-			absolute 
-			top-1/2
-			hidden
-			sm:block
+.project-container {
+  @apply
+  flex
+   justify-center
+   items-center
+   pt-12
+   ;
+}
+
+.project {
+  @apply
+    rounded-3xl
+    w-2/5;
+}
+.github-live-container {
+  background-color: transparent;
+  @apply
+   flex
+   justify-center
+   items-center
+   flex-row
+   space-x-8
+   
+   p-8;
+    
+}
+
+.link-button {
+  background-color: var(--light-gr);
+  color: var(--bg-gr);
+  @apply
+    rounded-3xl
+    w-80
+   ;
 }
 
 /* About */
@@ -269,16 +292,80 @@ body {
   background-color: var(--light-gr);
   color:white;
   @apply
-    rounded-full
-    w-3/5
-    w-3/5
-    sm:w-3/5
-    sm:h-4/5
+    rounded-3xl
+    p-5
+    max-w-4xl
+    max-h-[500px]
+    sm:max-w-5xl
+    sm:max-h-[500px]
     text-center
-    object-contain;
+    overflow-auto;
 }
 
 .about-header {
   font-family: 'Rubik Mono One', sans-serif;
 }
+
+/* Contact */
+.contact-container {
+  @apply
+  grid 
+  place-items-center
+  row-span-3
+}
+
+form {
+  background-color: var(--med-gr);
+  @apply
+  rounded-lg
+  p-8
+  space-y-2
+  sm:space-y-4
+  h-[480px]
+  sm:h-[500px]
+  w-11/12
+  sm:w-7/12;
+
+}
+
+.contact-text {
+  font-family: 'Rubik Mono One', sans-serif;
+  @apply
+  text-center
+  text-white
+  py-8;
+}
+
+input[type=text],input[type=email], select, textarea {
+  border-color: var(--dark-gr);
+  @apply
+  w-full
+  p-4
+  rounded-2xl
+  overflow-y-auto
+  border;
+}
+.input-container {
+  @apply
+  flex
+  justify-center
+  items-center;
+}
+
+input[type=submit] {
+  background-color: var(--forest-gr);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--light-gr);
+  color:black;
+}
+
+
+
 

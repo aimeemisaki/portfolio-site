@@ -21,7 +21,7 @@ const Home = () => {
                 <i>Passionate to help others and understand their needs, I became a full stack software engineer, so I could build code that leads to positive, tangible results for all end-users.</i><br/>
                 </p>
                 <p className='home-text'> Using my communication skills and stragetic analysis capabilities, I strive to optimize web development both in front and back end and work efficiently with my team.</p>
-                <p>In my past lives, I worked in social services, assisting refugees to find shelter and employment in Paris, as well as in environmental research, analyzing sustainability projects for the European Union in Berlin, and was an educator and community leader in Tokyo and New York.</p>
+                <p>In my past lives, I worked in social services, assisting refugees to find shelter and employment in Paris, as well as in environmental research, analyzing sustainability projects for the European Union in Berlin, and was an Artist Manager, Educator and Community Leader in Tokyo and New York.</p>
             </div>
         </div>
     </div>
