@@ -14,7 +14,7 @@ const Home = () => {
         <div className='home-text-container'>
             <div className='home-header header-text'>
                 <h1>HI, SALUT, こんにちは、HALLO, I'M AIMEE,<br/>
-                AND I'M A POLYGLOT FULL-STACK SOFTWARE ENGINEER</h1>
+                AND I'M A POLYGLOT FULL-STACK SOFTWARE ENGINEER.</h1>
             </div>
             <div className=''>
                 <p className='home-text'>

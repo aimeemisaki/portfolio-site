@@ -179,7 +179,9 @@ body {
   @apply
     flex
     flex-col
-    md:flex-row;
+    justify-center
+    items-center
+    sm:flex-row;
 }
 .intro {
   background-color:#222522;
@@ -188,24 +190,35 @@ body {
 
 .portrait-container {
   overflow:hidden;
-  filter: drop-shadow(0 8px 5px rgb(172, 181, 166));
   @apply
     rounded-full
-    md:h-[500px]
-    md:w-[500px]
-    mt-16
-    ml-24
+    w-[200px]
+    h-[300px]
+    sm:w-[300px]
+    sm:h-[450px]
+    mt-8
+    sm:mt-16
+    ml-0
+    sm:ml-24
 }
+
 
 .home-text-container {
     @apply
+      overflow-y-auto
       flex
-      justify-center
-      items-center
       text-white
       flex-col
-      w-2/4
-      ml-24
+      w-3/5
+      h-72
+      p-8
+      text-center
+      sm:p-0
+      sm:text-left
+      sm:w-2/4
+      sm:ml-12
+      sm:h-96
+      sm:pt-16
   ;
 }
 
