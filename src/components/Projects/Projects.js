@@ -16,7 +16,7 @@ function Projects () {
     }
 
     return (
-        <div className='grid-centered'>
+        <div className='projects-container centered'>
 			<Carousel fade>
                 <Carousel.Item>
                     <div className='project-container'>
@@ -52,6 +52,7 @@ function Projects () {
                         alt="second project"
                         />
                     </div>
+                    <div className='links-container'>
                     <div className='github-live-container'>
                         <a href='https://github.com/aimeemisaki/destinationizer'>
                             <button className='link-button'>
@@ -63,6 +64,7 @@ function Projects () {
                                 LIVE
                             </button>
                         </a>
+                    </div>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>

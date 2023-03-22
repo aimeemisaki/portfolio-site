@@ -72,6 +72,22 @@ body {
 } */
 
 /*  Layout */
+
+.grid-centered {
+  @apply 
+    grid 
+    place-items-center
+    row-span-5
+  ;
+}
+
+.centered {
+  @apply
+  grid 
+  place-items-center
+  h-screen
+}
+
 .horizontal {
   @apply
     flex
@@ -242,6 +258,14 @@ body {
 }
 
 /* Projects */
+.projects-container {
+  @apply
+  centered
+  mt-2
+  sm:mt-0
+  ;
+}
+
 .project-container {
   @apply
   flex
@@ -254,7 +278,8 @@ body {
 .project {
   @apply
     rounded-3xl
-    w-2/5;
+    w-3/5
+    sm:w-2/5;
 }
 .github-live-container {
   background-color: transparent;
@@ -262,9 +287,12 @@ body {
    flex
    justify-center
    items-center
-   flex-row
-   space-x-8
-   
+   flex-col
+   sm:flex-row
+   space-y-8
+   sm:space-y-0
+   space-x-0
+   sm:space-x-8
    p-8;
     
 }
@@ -274,7 +302,8 @@ body {
   color: var(--bg-gr);
   @apply
     rounded-3xl
-    w-80
+    w-72
+    sm:w-80
    ;
 }
 
@@ -318,7 +347,8 @@ form {
   background-color: var(--med-gr);
   @apply
   rounded-lg
-  p-8
+  p-4
+  sm:p-8
   space-y-2
   sm:space-y-4
   h-[480px]
