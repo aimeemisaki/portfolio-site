@@ -22,15 +22,15 @@ const Experiences = () => {
             <div className='experiences-container'>
                 <img className='world-map' src={worldMap} alt='world-map'></img>
             </div>
-                    <Modal show={show} onHide={handleClose}> 
-                        <div>
-                            <iframe src={resume} title='resume' frameborder="0" width="100%" height="800px" className="resume-file"> 
-                             </iframe>
-                        </div>
-                    </Modal>
-            
-            <Paris />
-            
+            <Modal 
+            show={show} 
+            onHide={handleClose} 
+            className='resume-modal'> 
+                <div>
+                    <iframe src={resume} title='resume' frameborder="0" width="100%" height="800px" className="resume-file"> 
+                        </iframe>
+                </div>
+            </Modal>
         </div>
         </>
     )

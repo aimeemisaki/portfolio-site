@@ -253,6 +253,12 @@ body {
     ;
 }
 
+.resume-modal {
+  @apply
+  flex 
+  justify-center;
+}
+
 .resume-button-container {
   @apply
     mt-12
@@ -271,15 +277,6 @@ body {
     mt-8
     sm:mt-0;
     ;
-}
-
-.resume-button:hover {
-  
-}
-
-.resume-file {
-  @apply
-    scroll;
 }
 
 /* Projects */
@@ -426,6 +423,17 @@ input[type=submit]:hover {
   color:black;
 }
 
+@media (max-width: 640px) { 
+  .resume-modal {
+    @apply
+    w-4/5
+    ml-11
+    mt-8
+    h-[75%]
+    sm:w-full
+    sm:h-[100%]
+  }
 
+}
 
 
