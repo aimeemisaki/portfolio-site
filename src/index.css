@@ -188,6 +188,11 @@ body {
   color: white;
 }
 
+.link-logos {
+  width:50px;
+  filter:invert(1)
+}
+
 .portrait-container {
   overflow:hidden;
   @apply

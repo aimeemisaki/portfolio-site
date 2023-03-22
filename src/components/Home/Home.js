@@ -1,5 +1,7 @@
 
 import React from 'react';
+import linkedinLogo from '../../assets/linkedinLogo.png';
+import githubLogo from '../../assets/githubIcon.png';
 
 const Home = () => {
     return (
@@ -12,6 +14,14 @@ const Home = () => {
                 />
             </div>
         <div className='home-text-container'>
+        <div className='horizontal pb-8 gap-x-4 self-center sm:self-start'>
+                    <a href='https://www.linkedin.com/in/aimee-misaki'>
+                        <img src={linkedinLogo} alt='Linked In Link' className='link-logos' />
+                    </a>
+                    <a href='https://github.com/aimeemisaki'>
+                        <img src={githubLogo} alt='Github Link' className='link-logos' />
+                    </a>
+            </div>
             <div className='home-header header-text'>
                 <h1>HI, SALUT, こんにちは、HALLO, I'M AIMEE,<br/>
                 AND I'M A POLYGLOT FULL-STACK SOFTWARE ENGINEER.</h1>
