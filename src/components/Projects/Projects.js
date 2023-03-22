@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
 import { Carousel } from 'react-bootstrap';
 import destinationizerImg from '../../assets/destinationizerImg.png';
 import meetneatImg from '../../assets/meetneatImg.png';
@@ -6,14 +6,6 @@ import momnspotImg from '../../assets/momnspotImg.png';
 import carmafloresVid from '../../assets/carmafloresVid.mp4';
 
 function Projects () {
-	
-    const [details, setDetails] = useState(false)
-
-    function showDetails (e) {
-       if (!e?.target.tagName.includes('img')) return true
-    
-       return false
-    }
 
     return (
         <div className='projects-container centered'>

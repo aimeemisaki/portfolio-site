@@ -1,7 +1,5 @@
-import { useState } from "react";
-import toggleModal from "../../data-and-functions/toggleModal";
-import City from "./City";
-import Paris from './Paris'
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
 import worldMap from '../../assets/worldMap.png'
 import resume from '../../assets/resume.pdf'
 import Modal from 'react-bootstrap/Modal';
