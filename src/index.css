@@ -12,7 +12,7 @@
   --forest-gr: #383527;
   --modal-bg: rgba(50, 50, 50, 0.8);
   --scroll-thumb: rgb(90, 90, 90);
-  --med-gr: #90B677;
+  --med-gr: #3B6023;
 }
 
 /* #36422F;*/
@@ -221,16 +221,22 @@ body {
 /* Experiences */
 .experiences-container {
   @apply
-    grid 
-    place-items-center
-    row-span-3
-    pt-16
+    flex
+		justify-center
+		items-center
+    mt-[15%]
+    sm:grid 
+    sm:place-items-center
+    sm:row-span-3
+    sm:pt-16
+    sm:mt-0 
   ;
 }
 
 .world-map {
   @apply
-    w-3/5
+    w-full
+    sm:w-3/5
     ;
 }
 
@@ -249,7 +255,13 @@ body {
     text-center
     w-1/5
     h-[3rem]
+    mt-8
+    sm:mt-0;
     ;
+}
+
+.resume-button:hover {
+  
 }
 
 .resume-file {
@@ -305,6 +317,11 @@ body {
     w-72
     sm:w-80
    ;
+}
+
+.link-button:hover {
+  background-color: grey;
+  color:white;
 }
 
 /* About */
