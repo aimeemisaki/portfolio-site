@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import destinationizerImg from '../../assets/destinationizerImg.png';
 import meetneatImg from '../../assets/meetneatImg.png';
 import momnspotImg from '../../assets/momnspotImg.png';
-import carmafloresVid from '../../assets/carmafloresVid.mp4';
+import carmafloresPortfolio from '../../assets/camafloresPortfolio.mp4'
 
 function Projects () {
 
@@ -45,18 +45,18 @@ function Projects () {
                         />
                     </div>
                     <div className='links-container'>
-                    <div className='github-live-container'>
-                        <a href='https://github.com/aimeemisaki/destinationizer'>
-                            <button className='link-button'>
-                                GIHUB
-                            </button>
-                        </a>
-                        <a href='https://destinationizer.netlify.app/'>
-                            <button className='link-button'>
-                                LIVE
-                            </button>
-                        </a>
-                    </div>
+                        <div className='github-live-container'>
+                            <a href='https://github.com/aimeemisaki/destinationizer'>
+                                <button className='link-button'>
+                                    GIHUB
+                                </button>
+                            </a>
+                            <a href='https://destinationizer.netlify.app/'>
+                                <button className='link-button'>
+                                    LIVE
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -67,32 +67,46 @@ function Projects () {
                         autoplay muted loop
                         >
                             <source 
-                            src={carmafloresVid} 
+                            src={carmafloresPortfolio} 
                             type="video/mp4" />
                         </video>
                     </div>
-                    <div className='github-live-container'>
-                        <a href='https://github.com/aimeemisaki/carmaflores.github.io'>
-                            <button className='link-button'>
-                                GIHUB
-                            </button>
-                        </a>
+                    <div className='links-container'>
+                        <div className='github-live-container'>
+                            <a href='https://github.com/aimeemisaki/carmaflores.github.io'>
+                                <button className='link-button'>
+                                    GIHUB
+                                </button>
+                            </a>
+                            <a href='https://carmaflores.com/'>
+                                <button className='link-button'>
+                                    LIVE
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <div className='project-container'>
-                        <img
-                        className='project'
-                        src={momnspotImg}
-                        alt="fourth project"
-                        />
-                    </div>
-                    <div className='github-live-container'>
-                        <a href='https://github.com/aimeemisaki/mom_n_spot'>
-                            <button className='link-button'>
-                                GIHUB
-                            </button>
-                        </a>
+                    <div className='links-container'>
+                        <div className='project-container'>
+                            <img
+                            className='project'
+                            src={momnspotImg}
+                            alt="fourth project"
+                            />
+                        </div>
+                        <div className='github-live-container'>
+                            <a href='https://github.com/aimeemisaki/mom_n_spot'>
+                                <button className='link-button'>
+                                    GIHUB
+                                </button>
+                            </a>
+                            <a href='https://mom-n-spot.herokuapp.com/'>
+                                <button className='link-button'>
+                                    LIVE
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </Carousel.Item>
         </Carousel>
