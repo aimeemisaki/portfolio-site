@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import worldMap from '../../assets/worldMap.png'
-import resume from '../../assets/resume.pdf'
 import Modal from 'react-bootstrap/Modal';
+import resume from '../../assets/resume.pdf'
 
 const Experiences = () => {
     const [show, setShow] = useState(false);
