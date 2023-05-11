@@ -12,6 +12,7 @@
   --forest-gr: #383527;
   --modal-bg: rgba(50, 50, 50, 0.8);
   --scroll-thumb: rgb(90, 90, 90);
+  --med-gr: #3B6023;
 }
 
 /* #36422F;*/
@@ -71,6 +72,22 @@ body {
 } */
 
 /*  Layout */
+
+.grid-centered {
+  @apply 
+    grid 
+    place-items-center
+    row-span-5
+  ;
+}
+
+.centered {
+  @apply
+  grid 
+  place-items-center
+  h-screen
+}
+
 .horizontal {
   @apply
     flex
@@ -98,13 +115,13 @@ body {
 }
 
 .modals-content {
+  background-color: var(--modal-bg);
   @apply 
     max-h-[80%] 
-    modal-bg
     rounded-2xl 
     scroll
     border
-    mt-16
+    mt-8
     md:mt-36 
     mx-auto 
   ;
@@ -162,33 +179,51 @@ body {
   @apply
     flex
     flex-col
-    md:flex-row;
+    justify-center
+    items-center
+    sm:flex-row;
 }
 .intro {
   background-color:#222522;
   color: white;
 }
 
+.link-logos {
+  width:50px;
+  filter:invert(1)
+}
+
 .portrait-container {
   overflow:hidden;
-  filter: drop-shadow(0 8px 5px rgb(172, 181, 166));
   @apply
     rounded-full
-    md:h-[500px]
-    md:w-[500px]
-    mt-16
-    ml-24
+    w-[200px]
+    h-[300px]
+    sm:w-[300px]
+    sm:h-[450px]
+    mt-8
+    sm:mt-16
+    ml-0
+    sm:ml-24
 }
+
 
 .home-text-container {
     @apply
+      overflow-y-auto
       flex
-      justify-center
-      items-center
       text-white
       flex-col
-      w-2/4
-      ml-24
+      w-3/5
+      h-72
+      p-8
+      text-center
+      sm:p-0
+      sm:text-left
+      sm:w-2/4
+      sm:ml-12
+      sm:h-96
+      sm:pt-16
   ;
 }
 
@@ -204,53 +239,206 @@ body {
 /* Experiences */
 .experiences-container {
   @apply
-    grid 
-    place-items-center
-    row-span-5 
-    pt-16
+    flex
+		justify-center
+		items-center
+    mt-[15%]
+    sm:grid 
+    sm:place-items-center
+    sm:row-span-3
+    sm:pt-16
+    sm:mt-0 
   ;
 }
 
 .world-map {
   @apply
-    w-3/5
+    w-full
+    sm:w-3/5
     ;
 }
 
-.paris-container {
-  background-color: var(--light-gr);
-    @apply 
-    items-center
-    absolute
-    top-32
-    left-[34rem]
-    vertical
-    h-[10rem]
-    w-[30rem]
-    md:h-[4rem]
-    md:w-[20rem]
-    rounded-full
-    text-center
-    py-4
-    px-4
-    text-white;
+.resume-modal {
+  @apply
+  flex 
+  justify-center;
 }
 
-.city-container {
-  background-color: var(--light-gr);
-    @apply 
-    items-center
-    absolute
-    vertical
-    h-[10rem]
-    w-[30rem]
-    md:h-[4rem]
-    md:w-[20rem]
+.resume-button-container {
+  @apply
+    mt-12
+    grid 
+    place-items-center;
+}
+
+.resume-button {
+  background-color: white;
+  color:var(--forest-gr);
+    @apply
     rounded-full
     text-center
-    py-4
-    px-4
-    text-white;
+    w-1/5
+    h-[3rem]
+    mt-8
+    sm:mt-0;
+    ;
+}
+
+/* Projects */
+.projects-container {
+  @apply
+  centered
+  mt-2
+  sm:mt-0
+  ;
+}
+
+.project-container {
+  @apply
+  flex
+   justify-center
+   items-center
+   pt-12
+   ;
+}
+
+.project {
+  @apply
+    rounded-3xl
+    w-3/5
+    sm:w-2/5;
+}
+.github-live-container {
+  background-color: transparent;
+  @apply
+   flex
+   justify-center
+   items-center
+   flex-col
+   sm:flex-row
+   space-y-8
+   sm:space-y-0
+   space-x-0
+   sm:space-x-8
+   p-8;
+    
+}
+
+.link-button {
+  background-color: var(--light-gr);
+  color: var(--bg-gr);
+  @apply
+    rounded-3xl
+    w-72
+    sm:w-80
+   ;
+}
+
+.link-button:hover {
+  background-color: grey;
+  color:white;
+}
+
+/* About */
+.about-page {
+  @apply
+    grid 
+    place-items-center
+    row-span-3
+    pt-16
+  ;
+}
+
+.about-container {
+  background-color: var(--light-gr);
+  color:white;
+  @apply
+    rounded-3xl
+    p-5
+    max-w-4xl
+    max-h-[500px]
+    sm:max-w-5xl
+    sm:max-h-[500px]
+    text-center
+    overflow-auto;
+}
+
+.about-header {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+/* Contact */
+.contact-container {
+  @apply
+  grid 
+  place-items-center
+  row-span-3
+}
+
+form {
+  background-color: var(--med-gr);
+  @apply
+  rounded-lg
+  p-4
+  sm:p-8
+  space-y-2
+  sm:space-y-4
+  h-[480px]
+  sm:h-[500px]
+  w-11/12
+  sm:w-7/12;
+
+}
+
+.contact-text {
+  font-family: 'Rubik Mono One', sans-serif;
+  @apply
+  text-center
+  text-white
+  py-8;
+}
+
+input[type=text],input[type=email], select, textarea {
+  border-color: var(--dark-gr);
+  @apply
+  w-full
+  p-4
+  rounded-2xl
+  overflow-y-auto
+  border;
+}
+.input-container {
+  @apply
+  flex
+  justify-center
+  items-center;
+}
+
+input[type=submit] {
+  background-color: var(--forest-gr);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--light-gr);
+  color:black;
+}
+
+@media (max-width: 640px) { 
+  .resume-modal {
+    @apply
+    w-4/5
+    ml-11
+    mt-8
+    h-[75%]
+    sm:w-full
+    sm:h-[100%]
+  }
+
 }
 
 
